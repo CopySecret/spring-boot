@@ -295,7 +295,7 @@ public class SpringApplication {
 			Banner printedBanner = printBanner(environment);
 			context = createApplicationContext();
 			context.setApplicationStartup(this.applicationStartup);
-			prepareContext(bootstrapContext, context, environment, listeners, applicationArguments, printedBanner);
+			prepareContext(bootstrapContext, context, environment, listeners, applicationArguments, printedBanner);//注册了启动类到BeanDefinition
 			refreshContext(context);
 			afterRefresh(context, applicationArguments);
 			stopWatch.stop();

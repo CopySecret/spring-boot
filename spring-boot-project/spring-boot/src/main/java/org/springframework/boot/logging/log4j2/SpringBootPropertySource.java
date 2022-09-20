@@ -22,6 +22,8 @@ import java.util.Map;
 import org.apache.logging.log4j.core.util.ShutdownCallbackRegistry;
 import org.apache.logging.log4j.util.BiConsumer;
 import org.apache.logging.log4j.util.PropertySource;
+import org.springframework.context.annotation.Import;
+import org.springframework.util.StringUtils;
 
 /**
  * Spring Boot {@link PropertySource} that disables Log4j2's shutdown hook.

@@ -16,13 +16,28 @@
 
 package smoketest.web.staticcontent;
 
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
+import smoketest.web.staticcontent.beanfactorytest.pojo.BeanB;
+import smoketest.web.staticcontent.beanfactorytest.pojo.Dog;
 
 @SpringBootApplication
 public class SampleWebStaticApplication extends SpringBootServletInitializer {
+
+
+	@Bean(autowire = Autowire.BY_TYPE)
+	public BeanB beanB(){
+		return new BeanB();
+	}
+
+	@Bean(autowire = Autowire.BY_TYPE)
+	public Dog dog(){
+		return new Dog();
+	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

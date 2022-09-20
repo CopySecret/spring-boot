@@ -34,6 +34,7 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.core.annotation.AliasFor;
+import org.springframework.core.annotation.Order;
 import org.springframework.data.repository.Repository;
 
 /**
